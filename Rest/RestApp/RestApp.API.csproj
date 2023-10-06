@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+	<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="7.0.10" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RestApp.BL\RestApp.BL.csproj" />
+    <ProjectReference Include="..\RestApp.Common\RestApp.Common.csproj" />
+    <ProjectReference Include="..\RestApp.Dal\RestApp.Dal.csproj" />
+    <ProjectReference Include="..\RestApp.DemoMigrations\RestApp.DemoMigrations.csproj" />
+    <ProjectReference Include="..\RestApp.Domain\RestApp.Domain.csproj" />
+    <ProjectReference Include="..\RestApp.SecondaryDbMigrations\RestApp.SecondaryDbMigrations.csproj" />
+  </ItemGroup>
+
+</Project>

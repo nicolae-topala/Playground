@@ -1,0 +1,1 @@
+{"Coffee":{"CoffeeId":"ed80c261-26b9-45b2-9acf-723c40058f20","IsDone":false,"CoffeeMachineId":"9209d717-c541-4909-a64a-77aa5cabd95f","CoffeeMachine":{"CoffeeMachineId":"9209d717-c541-4909-a64a-77aa5cabd95f","CoffeeMachineSerialNr":"VeryUniqueSerialNumber","IsActive":true,"Coffees":null}}}

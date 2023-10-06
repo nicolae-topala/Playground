@@ -1,0 +1,80 @@
+2023-07-24 09:38:06.9753|1|Info|LoggingConfiguration|Logging to C:\Users\nicolae.topala\Repos\Playground\NServiceBus\.logs\servicecontrol-audit\logfile.2023-07-24.txt with LogLevel 'Info'
+2023-07-24 09:38:07.0253|1|Info|ServiceControl.Audit.Infrastructure.Settings.Settings|No settings found for audit log queue to import, default name will be used
+2023-07-24 09:38:07.6163|1|Info|ServiceControl.Audit.Persistence.PersistenceManifestLibrary|Found persistence manifest for In-memory
+2023-07-24 09:38:07.7033|1|Info|ServiceControl.Audit.Infrastructure.Bootstrapper|
+-------------------------------------------------------------
+ServiceControl Audit Version:       4.32.2+02388c6fff44fd9eb48bf9c36de0db14589e02c3
+Audit Retention Period:             10.00:00:00
+Forwarding Audit Messages:          False
+Database Size:                       b
+Database Folder Size:                b
+ServiceControl Logging Level:       Info
+RavenDB Logging Level:              Warn
+Transport Customization:            ServiceControl.Transports.Learning.LearningTransportCustomization, ServiceControl.Transports.Learning,
+Persistence Customization:          ServiceControl.Audit.Persistence.InMemory.InMemoryPersistenceConfiguration, ServiceControl.Audit.Persistence.InMemory,
+Persistence:                        InMemory
+-------------------------------------------------------------
+2023-07-24 09:38:07.7364|1|Info|ServiceControl.Transports.TransportManifestLibrary|Found transport manifest for LearningTransport
+2023-07-24 09:38:09.2991|1|Warn|NServiceBus.TransportExtensions|A connection string named 'NServiceBus/Transport' was found. Using named connection strings is discouraged. Instead, load the connection string in your code and pass the value to EndpointConfiguration.UseTransport().ConnectionString(connectionString).
+2023-07-24 09:38:09.4611|7|Info|ServiceControl.Audit.Auditing.AuditIngestion|Ensure started. Infrastructure starting
+2023-07-24 09:38:09.4611|7|Warn|NServiceBus.TransportExtensions|A connection string named 'NServiceBus/Transport' was found. Using named connection strings is discouraged. Instead, load the connection string in your code and pass the value to EndpointConfiguration.UseTransport().ConnectionString(connectionString).
+2023-07-24 09:38:09.4766|7|Warn|NServiceBus.TransportExtensions|A connection string named 'NServiceBus/Transport' was found. Using named connection strings is discouraged. Instead, load the connection string in your code and pass the value to EndpointConfiguration.UseTransport().ConnectionString(connectionString).
+2023-07-24 09:38:09.5006|7|Info|ServiceControl.Audit.Auditing.AuditIngestion|Ensure started. Infrastructure started
+2023-07-24 09:38:09.6326|1|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-07-24 09:38:09.6326|1|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2023-07-24 09:38:09.6326|1|Info|Microsoft.Hosting.Lifetime|Content root path: C:\Users\nicolae.topala\Repos\Playground\NServiceBus\Platform\bin\Debug\net6.0\platform\servicecontrol\servicecontrol-audit-instance\
+2023-07-24 13:56:41.9764|1|Info|LoggingConfiguration|Logging to C:\Users\nicolae.topala\Repos\Playground\NServiceBus\.logs\servicecontrol-audit\logfile.2023-07-24.txt with LogLevel 'Info'
+2023-07-24 13:56:42.0234|1|Info|ServiceControl.Audit.Infrastructure.Settings.Settings|No settings found for audit log queue to import, default name will be used
+2023-07-24 13:56:42.9044|1|Info|ServiceControl.Audit.Persistence.PersistenceManifestLibrary|Found persistence manifest for In-memory
+2023-07-24 13:56:43.0014|1|Info|ServiceControl.Audit.Infrastructure.Bootstrapper|
+-------------------------------------------------------------
+ServiceControl Audit Version:       4.32.2+02388c6fff44fd9eb48bf9c36de0db14589e02c3
+Audit Retention Period:             10.00:00:00
+Forwarding Audit Messages:          False
+Database Size:                       b
+Database Folder Size:                b
+ServiceControl Logging Level:       Info
+RavenDB Logging Level:              Warn
+Transport Customization:            ServiceControl.Transports.Learning.LearningTransportCustomization, ServiceControl.Transports.Learning,
+Persistence Customization:          ServiceControl.Audit.Persistence.InMemory.InMemoryPersistenceConfiguration, ServiceControl.Audit.Persistence.InMemory,
+Persistence:                        InMemory
+-------------------------------------------------------------
+2023-07-24 13:56:43.0334|1|Info|ServiceControl.Transports.TransportManifestLibrary|Found transport manifest for LearningTransport
+2023-07-24 13:56:45.3657|1|Warn|NServiceBus.TransportExtensions|A connection string named 'NServiceBus/Transport' was found. Using named connection strings is discouraged. Instead, load the connection string in your code and pass the value to EndpointConfiguration.UseTransport().ConnectionString(connectionString).
+2023-07-24 13:56:45.4827|11|Info|ServiceControl.Audit.Auditing.AuditIngestion|Ensure started. Infrastructure starting
+2023-07-24 13:56:45.4947|11|Warn|NServiceBus.TransportExtensions|A connection string named 'NServiceBus/Transport' was found. Using named connection strings is discouraged. Instead, load the connection string in your code and pass the value to EndpointConfiguration.UseTransport().ConnectionString(connectionString).
+2023-07-24 13:56:45.4947|11|Warn|NServiceBus.TransportExtensions|A connection string named 'NServiceBus/Transport' was found. Using named connection strings is discouraged. Instead, load the connection string in your code and pass the value to EndpointConfiguration.UseTransport().ConnectionString(connectionString).
+2023-07-24 13:56:45.5177|11|Info|ServiceControl.Audit.Auditing.AuditIngestion|Ensure started. Infrastructure started
+2023-07-24 13:56:45.5837|7|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-07-24 13:56:45.5877|7|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2023-07-24 13:56:45.5877|7|Info|Microsoft.Hosting.Lifetime|Content root path: C:\Users\nicolae.topala\Repos\Playground\NServiceBus\Platform\bin\Debug\net6.0\platform\servicecontrol\servicecontrol-audit-instance\
+2023-07-24 14:01:56.9784|7|Info|Microsoft.Hosting.Lifetime|Application is shutting down...
+2023-07-24 14:01:56.9914|7|Info|ServiceControl.Audit.Auditing.AuditIngestion|Shutting down. Start/stop semaphore acquiring
+2023-07-24 14:01:56.9914|7|Info|ServiceControl.Audit.Auditing.AuditIngestion|Shutting down. Start/stop semaphore acquired
+2023-07-24 14:01:56.9914|7|Info|ServiceControl.Audit.Auditing.AuditIngestion|Shutting down. Infrastructure shut down commencing
+2023-07-24 14:01:56.9914|7|Info|NServiceBus.Raw.RunningRawEndpointInstance|Stopping receiver.
+2023-07-24 14:02:43.8863|1|Info|LoggingConfiguration|Logging to C:\Users\nicolae.topala\Repos\Playground\NServiceBus\.logs\servicecontrol-audit\logfile.2023-07-24.txt with LogLevel 'Info'
+2023-07-24 14:02:43.9553|1|Info|ServiceControl.Audit.Infrastructure.Settings.Settings|No settings found for audit log queue to import, default name will be used
+2023-07-24 14:02:44.2283|1|Info|ServiceControl.Audit.Persistence.PersistenceManifestLibrary|Found persistence manifest for In-memory
+2023-07-24 14:02:44.2773|1|Info|ServiceControl.Audit.Infrastructure.Bootstrapper|
+-------------------------------------------------------------
+ServiceControl Audit Version:       4.32.2+02388c6fff44fd9eb48bf9c36de0db14589e02c3
+Audit Retention Period:             10.00:00:00
+Forwarding Audit Messages:          False
+Database Size:                       b
+Database Folder Size:                b
+ServiceControl Logging Level:       Info
+RavenDB Logging Level:              Warn
+Transport Customization:            ServiceControl.Transports.Learning.LearningTransportCustomization, ServiceControl.Transports.Learning,
+Persistence Customization:          ServiceControl.Audit.Persistence.InMemory.InMemoryPersistenceConfiguration, ServiceControl.Audit.Persistence.InMemory,
+Persistence:                        InMemory
+-------------------------------------------------------------
+2023-07-24 14:02:44.3423|1|Info|ServiceControl.Transports.TransportManifestLibrary|Found transport manifest for LearningTransport
+2023-07-24 14:02:45.1710|1|Warn|NServiceBus.TransportExtensions|A connection string named 'NServiceBus/Transport' was found. Using named connection strings is discouraged. Instead, load the connection string in your code and pass the value to EndpointConfiguration.UseTransport().ConnectionString(connectionString).
+2023-07-24 14:02:45.3790|10|Info|ServiceControl.Audit.Auditing.AuditIngestion|Ensure started. Infrastructure starting
+2023-07-24 14:02:45.3900|10|Warn|NServiceBus.TransportExtensions|A connection string named 'NServiceBus/Transport' was found. Using named connection strings is discouraged. Instead, load the connection string in your code and pass the value to EndpointConfiguration.UseTransport().ConnectionString(connectionString).
+2023-07-24 14:02:45.3900|10|Warn|NServiceBus.TransportExtensions|A connection string named 'NServiceBus/Transport' was found. Using named connection strings is discouraged. Instead, load the connection string in your code and pass the value to EndpointConfiguration.UseTransport().ConnectionString(connectionString).
+2023-07-24 14:02:45.4130|10|Info|ServiceControl.Audit.Auditing.AuditIngestion|Ensure started. Infrastructure started
+2023-07-24 14:02:45.5390|1|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-07-24 14:02:45.5390|1|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2023-07-24 14:02:45.5540|1|Info|Microsoft.Hosting.Lifetime|Content root path: C:\Users\nicolae.topala\Repos\Playground\NServiceBus\Platform\bin\Debug\net6.0\platform\servicecontrol\servicecontrol-audit-instance\

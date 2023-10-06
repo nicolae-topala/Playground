@@ -1,0 +1,16 @@
+services:
+  demoSqlServer:
+    container_name: demoSqlServer
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      SA_PASSWORD: "Qwerty123$"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - demoSqlVolumeData:/var/opt/mssql
+
+volumes:
+  demoSqlVolumeData:
+    name: demoSqlVolumeData
+    driver: local

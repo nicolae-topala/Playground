@@ -1,0 +1,37 @@
+NServiceBus is a messaging framework for building distributed and scalable systems.
+It helps in building loosely coupled, reliable, and scalable applications.
+
+Messages:
+	Messages are the heart of NServiceBus.
+	Messages are simple, serializable classes that represent data sent between components.
+
+Endpoints:
+	An endpoint is a standalone application or service that communicates using NServiceBus.
+	Endpoints send and receive messages.
+
+Handlers:
+	Handlers are responsible for processing messages.
+	Create a handler class for each message type you want to process.
+
+Publish-Subscribe:
+	NServiceBus supports a publish-subscribe pattern for broadcasting messages to multiple subscribers.
+
+Message Routing:
+	NServiceBus handles message routing and ensures that messages reach their intended handlers and it is done in Program.cs.
+
+Saga:
+	A Saga is used to manage long-running processes and orchestrate multiple message interactions.
+	It helps maintain state across multiple messages.
+
+Error Handling:
+	NServiceBus provides robust error handling and retry mechanisms out of the box.
+
+Transport:
+	NServiceBus supports various transport mechanisms like RabbitMQ, Azure Service Bus, and MSMQ.
+	Choose a transport that fits your infrastructure and scalability requirements.
+
+Monitoring and Metrics:
+	Monitor the health and performance of your NServiceBus endpoints using tools like ServiceControl.
+
+Scaling:
+	NServiceBus can scale horizontally by adding more instances of endpoints to handle increased message load.
