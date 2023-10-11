@@ -1,12 +1,13 @@
-using Microsoft.EntityFrameworkCore;
-using SmartHome.Lights.Dal;
+using ES.BLL.Interfaces;
+using ES.BLL.Services;
+using ES.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
-var services = builder.Services;
 var configuration = builder.Configuration;
 
 // Add services to the container.
-services.AddDbContext<LightsDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("lightsDbConnection")));
+builder.Services.SetupElasticsearch(configuration);
+builder.Services.AddScoped<IElasticsearchProductService, ElasticsearchProductService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -14,7 +15,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
