@@ -1,0 +1,91 @@
+Key Concepts:
+1. Analyzers:
+Analyzers define how a string field should be analyzed. 
+It involves processes like tokenization, stemming, and removal of stop words. 
+
+Example:
+[Text(Analyzer = "standard")]
+public string YourField { get; set; }
+
+2. Mapping:
+Mapping defines the fields and their types in an index. It's crucial for efficient data storage and retrieval. 
+
+Example:
+var createIndexResponse = await _elasticClient.Indices.CreateAsync("your_index_name", c => c
+    .Map<YourDocument>(m => m
+        .Properties(p => p
+            .Text(t => t
+                .Name(n => n.YourField)
+                .Analyzer("standard")
+            )
+            .Keyword(k => k
+                .Name(n => n.KeywordField)
+            )
+        )
+    )
+);
+
+3. Query DSL:
+Elasticsearch uses a JSON-based query language for searching. Key components include:
+
+3.1 Match Query:
+Search for documents containing a specific value in a field.
+
+var searchResponse = await _elasticClient.SearchAsync<YourDocument>(s => s
+    .Query(q => q
+        .Match(m => m
+            .Field(f => f.YourField)
+            .Query("your_search_query")
+        )
+    )
+);
+
+3.2 Term Query:
+Search for documents containing an exact term in a field.
+
+var searchResponse = await _elasticClient.SearchAsync<YourDocument>(s => s
+    .Query(q => q
+        .Term(t => t
+            .Field(f => f.YourField)
+            .Value("exact_term")
+        )
+    )
+);
+
+3.3 Range Query:
+Search for documents within a specific numeric or date range.
+
+var searchResponse = await _elasticClient.SearchAsync<YourDocument>(s => s
+    .Query(q => q
+        .Range(r => r
+            .Field(f => f.YourNumericField)
+            .GreaterThanOrEquals(10)
+            .LessThanOrEquals(50)
+        )
+    )
+);
+
+3.4 Bool Query:
+Combine multiple queries using boolean logic.
+
+var searchResponse = await _elasticClient.SearchAsync<YourDocument>(s => s
+    .Query(q => q
+        .Bool(b => b
+            .Must(mu => mu
+                .Match(m => m
+                    .Field(f => f.Field1)
+                    .Query("value1")
+                )
+            )
+            .Filter(fi => fi
+                .Term(t => t
+                    .Field(f => f.Field2)
+                    .Value("value2")
+                )
+            )
+        )
+    )
+);
+
+More about elasticsearch -
+https://github.com/LisaHJung/Beginners-Crash-Course-to-Elastic-Stack-Series-Table-of-Contents
