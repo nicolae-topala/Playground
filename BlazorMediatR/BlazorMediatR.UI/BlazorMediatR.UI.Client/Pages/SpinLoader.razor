@@ -1,0 +1,11 @@
+﻿@rendermode InteractiveAuto
+
+<div class="loading-container">
+    <div class="loader"></div>
+    <span>@LoadingMessage</span>
+</div>
+
+@code {
+    [Parameter]
+    public string LoadingMessage { get; set; } = null!;
+}

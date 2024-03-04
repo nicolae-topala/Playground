@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "WebApp.Common.Protos";
+
+package external_order;
+
+enum OrderStatus {
+	PENDING = 0;
+	PROCESSING = 1;
+	DELIVERD = 2;
+}
+
+service ExternalOrder {
+  rpc ProcessOrderById (ProcessOrder) returns (ProcessedOrder);
+}
+
+message ProcessOrder {
+  string order_id = 1;
+}
+
+message ProcessedOrder {
+  OrderStatus status = 1;
+}

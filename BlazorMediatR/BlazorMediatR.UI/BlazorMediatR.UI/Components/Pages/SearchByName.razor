@@ -1,0 +1,62 @@
+﻿@page "/customerSearchByName"
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+@inject ISender _mediator
+
+<h3>Search by ID</h3>
+
+<input type="text" @bind-value="@searchName" />
+<input type="button" value="Search" @onclick="@SearchByCustomerName" />
+
+@if (searchResult != null)
+{
+    <div>
+        <h4>Search Result:</h4>
+        <p>ID: @searchResult.Id</p>
+        <p>Name: @searchResult.Name</p>
+        <p>Address: @searchResult.Address</p>
+    </div>
+}
+else if (loading)
+{
+    <SpinLoader LoadingMessage="@loadingMessage" />
+}
+else
+{
+    <div>
+        <p>@errorMessage</p>
+    </div>
+}
+
+@code {
+    private string? searchName;
+    private CustomerDto? searchResult;
+    private string? errorMessage;
+    private Boolean loading = false;
+    private string loadingMessage = "Searching Customer...";
+
+    private async Task SearchByCustomerName()
+    {
+        if (searchName == null) return;
+
+        loading = true;
+        searchResult = null;
+        errorMessage = null;
+        await Task.Delay(2000);
+
+        try
+        {
+            searchResult = await _mediator.Send(new GetCustomerByNameQuery(searchName));
+
+            if (searchResult == null) errorMessage = "Not Found";
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+}

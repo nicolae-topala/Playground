@@ -1,0 +1,29 @@
+﻿@page "/customersList"
+@attribute [StreamRendering]
+@inject ISender _mediator
+
+@if (customers != null)
+{
+    <ul>
+        @foreach (var customer in customers)
+        {
+            <li>@customer.Name @customer.Address</li>
+        }
+    </ul>
+}
+else
+{
+    <SpinLoader LoadingMessage="@loadingMessage" />
+}
+
+@code {
+    private string loadingMessage = "Loading Customers...";
+    IEnumerable<CustomerDto> customers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(2000); 
+
+        customers = await _mediator.Send(new GetAllCustomersQuery());
+    }
+}

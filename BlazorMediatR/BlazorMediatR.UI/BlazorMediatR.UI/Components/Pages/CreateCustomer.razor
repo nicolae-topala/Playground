@@ -1,0 +1,76 @@
+﻿@page "/createCustomer"
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+@inject ISender _mediator
+
+<h3>Create Customer</h3>
+
+<EditForm Model="@createCustomer" OnValidSubmit="@CreateNewCustomer">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    Name: <InputText id="name" @bind-Value="createCustomer.Name" />
+    Address: <InputText id="address" @bind-Value="createCustomer.Address" />
+
+    <button type="submit" class="">Submit</button>
+</EditForm>
+
+@if (createdCustomer != null)
+{
+    <div>
+        <h4>Created Customer:</h4>
+        <p>ID: @createdCustomer.Id</p>
+        <p>Name: @createdCustomer.Name</p>
+        <p>Address: @createdCustomer.Address</p>
+    </div>
+}
+else if (loading)
+{
+    <div>
+        <SpinLoader LoadingMessage="@loadingMessage" />
+    </div>
+}
+else
+{
+    <div>
+        <p>@errorMessage</p>
+    </div>
+}
+
+@if (newCustomer != null)
+{
+    <div>
+        <h4>New Customer: </h4>
+        <p>@newCustomer.Name</p>
+        <p>@newCustomer.Address</p>
+    </div>
+}
+
+@code {
+    private string? errorMessage;
+    private Boolean loading = false;
+    private string loadingMessage = "Creating customer...";
+    private CreateCustomerDto createCustomer = new();
+    private CustomerDto? createdCustomer;
+    private CustomerDto? newCustomer;
+
+    private async Task CreateNewCustomer()
+    {
+
+        loading = true;
+        errorMessage = null;
+        await Task.Delay(2000);
+
+        try
+        {
+            createdCustomer = await _mediator.Send(new CreateNewCustomerCommand(createCustomer));
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+}
