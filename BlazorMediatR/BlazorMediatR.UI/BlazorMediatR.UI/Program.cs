@@ -1,5 +1,4 @@
 using BlazorMediatR.BLL;
-using BlazorMediatR.BLL.Notifications.Customers;
 using BlazorMediatR.DAL;
 using BlazorMediatR.DAL.Interfaces;
 using BlazorMediatR.DAL.Repositories;

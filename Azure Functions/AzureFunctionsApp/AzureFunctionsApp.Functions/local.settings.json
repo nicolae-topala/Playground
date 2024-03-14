@@ -1,0 +1,10 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "SqlConnectionString": "Server=127.0.0.1,1433;Database=BlazorDemo;User Id=sa;Password=Qwerty123$;TrustServerCertificate=True;",
+    "AzureWebJobsServiceBus": "",
+    "AzureWebJobsBlob": ""
+  }
+}
