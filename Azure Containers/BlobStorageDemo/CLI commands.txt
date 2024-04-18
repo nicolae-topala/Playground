@@ -1,0 +1,20 @@
+// Build the docker image based on the Dockerfile
+docker build -t testimage -f "Dockerfile" .
+
+// List all the docker images or check the UI to get the image Id
+docker images
+
+// Run a container with the image locally
+docker run -p localport:dockerport imageId
+
+// login to azure via azure CLI
+az login
+
+// Login to azure container registry
+az acr login --name azureContainerRegistryName
+
+// Tag the lacal image
+docker tag imageId azureContainerRegistryName.azurecr.io/imageName
+
+// push it to the azure container registry
+docker push azureContainerRegistryName.azurecr.io/imageName

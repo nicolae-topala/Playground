@@ -1,0 +1,6 @@
+@BlobStorageDemo.API_HostAddress = http://localhost:5182
+
+GET {{BlobStorageDemo.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
